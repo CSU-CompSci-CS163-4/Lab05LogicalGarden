@@ -21,6 +21,9 @@ Now the Logical Garden program should be complete! Even though you have tested e
 1. Turn in your program files to Zybooks
 2. Show your self-explanation and pseudocode to your TA (in-person) or submit it online
 
+## Extra Practice (Optional)
+You may have noticed in your testing that there are some things we just assume to be true. For example, that the user will enter row 1-3 and not some other number. For some extra practice, make a list of the methods that bugs could possibly introduced, and make some test cases that break the code. 
+
 # Additional Background Information
 
 Something that will be **very** useful for this lab is understanding how to call methods from other methods. Each method has a return type, whether it be a simple getter or a complex method. We can use our knowledge of the return type as well as the functionality of a method to chain multiple methods together. 
