@@ -19,9 +19,12 @@ if(fruit1.getName().equals("orange") || fruit1.getName().equals("banana")){
 ```
 but we can also use `pseudocode` to write what we want our program to do in a mix of plain english and code. Such as:
 ```
-if (fruit1's name is orange OR banana){
+//if (fruit1's name is orange OR banana){
     //do something
-}
+//}
+
+//else
+    //do something else
 ```
 There isn't a real ratio of how much code/english there is in pseudocode, just write something that will easily outline what you need to do when you get to coding, and that isn't only code. The focus is on solving the problem at hand, then later we can translate that plan into code. 
 
