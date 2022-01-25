@@ -27,6 +27,15 @@ public class GardenRow {
 
     public static void main(String[] args) {
         // include mains in every class for debugging purposes.
+        GardenRow gardenRowObj = new GardenRow("any", 6);
+        System.out.println("TESTING:");
+        System.out.println("EXPECTING: any");
+        System.out.println("ACTUAL   : " + gardenRowObj.getLight());
+        System.out.println();
+
+        System.out.println("EXPECTING: 6");
+        System.out.println("ACTUAL   : " + gardenRowObj.getPH());
+        System.out.println();
     }
 
 }
