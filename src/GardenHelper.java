@@ -9,37 +9,43 @@ public class GardenHelper {
         String action = view.getAction();
         while(!action.startsWith("n")) {
             if(action.startsWith("a")) {
-                addRow();
+                int row = view.getRow();
+                int pH = Integer.parseInt(view.input("What is the pH of the row? "));
+                String light = view.input("What is the sun coverage of the row? (full sun, partial sun, any) ");
+                addRow(row, pH, light);
             }
             else if(action.startsWith("p")) {
-                addPlant();
+                String plantName = view.input("What plant would you like to plant? (daisy, carrot, rose, swiss chard, begonia): ");
+                int row = view.getRow();
+                addPlant(plantName, row);
             }
             System.out.println("What would you like to do? ");
             action = view.getAction();
         }
     }
-
-    public void addRow() {
-        int row = view.getRow();
-        String light = view.input("What is the sun coverage of the row? (full sun, partial sun, any) ");
-        int pH = Integer.parseInt(view.input("What is the pH of the row? "));
+    /*
+       BRAINSTORM FOR ADDROW() HERE
+     */
+    public boolean addRow(int row, int pH, String light) {
         //TODO student
-
+        return false;
     }
-
-    public void addPlant() {
-        String plantName = view.input("What plant would you like to plant? (daisy, carrot, rose, swiss chard, begonia): ");
-        int row = view.getRow();
+    /*
+        DESCRIPTION OF ADDPLANT() HERE
+     */
+    public boolean addPlant(String plantName, int row) {
         if(canPlant(plantName, searchRow(row))){
             searchRow(row).setPlant(searchPlant(plantName));
             System.out.println(plantName.toUpperCase() + " added to row " + row + "!");
+            return true;
         }
         else{
             System.out.println(plantName.toUpperCase() + " was unable to be planted.");
+            return false;
         }
     }
 
-
+    //STEP 3
     public boolean canPlant(String plantName, GardenRow row){
         //TODO student
         return false;
@@ -89,9 +95,34 @@ public class GardenHelper {
 
 
     public static void main(String[] args) {
-        GardenHelper app = new GardenHelper();
-        app.buildOptions();
-        app.go();
+        GardenHelper gardenHelperObj = new GardenHelper();
+        gardenHelperObj.buildOptions();
+        //Test 1 for addRow():
+        System.out.println("Testing addRow(4, 6, any):");
+        System.out.println("EXPECTING: false");
+        System.out.println("ACTUAL   : " + gardenHelperObj.addRow(4, 6, "any"));
+        System.out.println();
+
+        //Test 2 for addRow():
+        System.out.println("Testing addRow(2, 6, any):");
+        System.out.println("EXPECTING: true");
+        System.out.println("ACTUAL   : " + gardenHelperObj.addRow(2, 6, "any"));
+        System.out.println();
+
+        //Test 1 for canPlant():
+        gardenHelperObj.addRow(2, 6, "full sun");
+        System.out.println("Testing canPlant(carrot, 2):");
+        System.out.println("EXPECTING: true");
+        System.out.println("ACTUAL   : " + gardenHelperObj.addPlant("carrot", 2));
+        System.out.println();
+
+        //Test 2 for canPlant():
+        gardenHelperObj.addRow(1, 2, "full sun");
+        System.out.println("Testing canPlant(carrot, 2):");
+        System.out.println("EXPECTING: false");
+        System.out.println("ACTUAL   : " + gardenHelperObj.addPlant("carrot", 1));
+        System.out.println();
+
     }
 
 }
