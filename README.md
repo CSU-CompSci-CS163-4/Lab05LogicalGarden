@@ -12,7 +12,7 @@ Take a look at `GardenHelper.java` and its methods `addRow()` and `addPlant()`. 
 Take a look at the `canPlant()` method in the [javadoc](http://www.cs.colostate.edu/~cs163/javadoc/lab05/GardenHelper.html). Before you start coding, draw out the requirements and write pseudocode for how to implement this method. There are lots of variables to consider, as there are in industry. This is a crucial step in the coding process to save valuable time and headaches! Puzzle it out now, then the actual coding process will go much smoother. 
 
 Not sure what pseudocode is? No problem! We're used to seeing fully functional code, such as
-```
+```java
 if(fruit1.getName().equals("orange") || fruit1.getName().equals("banana")){
     //do something
 }
@@ -46,21 +46,21 @@ You may have noticed in your testing that there are some things we just assume t
 Something that will be **very** useful for this lab is understanding how to call methods from other methods. Each method has a return type, whether it be a simple getter or a complex method. We can use our knowledge of the return type as well as the functionality of a method to chain multiple methods together. 
 
 For example, we have used the `.equals()` method before.
-```
+```java
 str = "apples";
 if(str.equals("oranges")){
     //do something
 }
 ```
 Now, instead of calling just one method, the `.equals()` method, we can call the `equals()` method **and** the `getName()` method. (This is assuming we have a Fruit object that has a name variable and associated getName() method)
-```
+```java
 Fruit fruit1 = new Fruit("orange");
 if(fruit1.getName().equals("orange")){
     //do something
 }
 ```
 Or even more complex:
-```
+```java
 Fruit fruit1 = new Fruit("orange");
 Fruit fruit2 = new Fruit("banana");
 if(fruit1.getName().equals(fruit2.getName())){
@@ -83,14 +83,14 @@ To check if multiple conditions are true, `logical operators` and `nested if-sta
 
 Logical Operator Examples:
 
-```
+```java
 //if fruit1's name is orange OR banana, do something
 if(fruit1.getName().equals("orange") || fruit1.getName().equals("banana")){
     //do something
 }
 ```
 
-```
+```java
 int a = 1;
 int b = 2;
 int c = 5;
@@ -103,7 +103,7 @@ These `if` statements can get a bit lengthy, but are useful when there are multi
 
 Nested `if` Statement Example:
 
-```
+```java
 if(plant1.isVegetable()){
     if(plant1.isBroccoli()){
         //ew! don't eat it
@@ -121,7 +121,7 @@ While this could have been implemented with logical operators, some situations a
 The final thing to mention for this lab is the dreaded `null pointer exception`. This "Billion Dollar Mistake" is important to consider if you get `NullPointerException` errors. Sometimes, like if you are searching for an object, if the computer doesn't find the object it will return null. If that return value is being called on by another method, there will be a null pointer exception. 
 
 For example:
-```
+```java
 int id = searchBook("Hamlet").getId();
 //if searchBook("Hamlet") returns null, 
 //null.getId() will result in a NullPointerException
@@ -130,13 +130,13 @@ int id = searchBook("Hamlet").getId();
 To fix this, you can add a [variable] != null condition.
 
 For example:
-```
+```java
 if(searchBook("Hamlet") != null){
-int id = searchBook("Hamlet").getId();
+  int id = searchBook("Hamlet").getId();
 }
 ```
 or
-```
+```java
 if(searchBook("Hamlet") != null && searchBook("Hamlet").getId() == 5){
     //do something
 }
