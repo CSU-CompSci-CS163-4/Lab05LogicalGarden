@@ -3,13 +3,13 @@
 In this lab, you will work with a small gardening program to practice using logical operators and conditionals.
 
 ## Step 1: Compiling and Initial Runtime Errors
-Run the main method in `GardenHelper.java`. Does your code compile? If so, great. Exit the program. Make sure that so far, your program is functioning as normal. If you have any trouble exiting your program, check your code, specifically the `go()` method in `GardenHelper.java` to see what might be causing an issue. (**Hint**: The promts on the screen are correct, those should not be changed.)
+Run the main method in `GardenHelper.java`. Does your code compile? If so, great. Exit the program. Make sure that so far, your program is functioning as normal. If you have any trouble exiting your program, check your code, specifically the `go()` method in `GardenHelper.java` to see what might be causing this issue. (**Hint**: The prompts on the screen are correct, those should not be changed.)
 
 ## Step 2: Self-Explanation
 Take a look at `GardenHelper.java` and its methods `addRow()` and `addPlant()`. We have provided `addPlant()` for you, but it is important to determine what it is doing so you can implement `addRow()` properly. Use the code and the [javadoc](http://www.cs.colostate.edu/~cs163/javadoc/lab05/package-summary.html) to write a brief explanation of what `addPlant()` is doing and brainstorm what else you need to do for `addRow()`. Then, implement `addRow()`. We have provided two test cases for you in `GardenHelper.java`'s `main` method. For testing specific methods, run from `GardenHelper.java`'s `main` and only the tests you have uncommented will run. Running from `GardenMain.java`'s `main` will run the program in its entirety. Add more test cases to `GardenHelper.java`'s `main` make sure `addRow()` works properly before running the whole program too much.
 
 ## Step 3: Design
-Take a look at the `canPlant()` method in the [javadoc](http://www.cs.colostate.edu/~cs163/javadoc/lab05/GardenHelper.html). Before you start coding, draw out the requirements and write pseudocode for how to implement this method. There are lots of variables to consider, as there are in industry. This is a crucial step in the coding process to save valuable time and headaches! Puzzle it out now, then the actual coding process will go much smoother. 
+Take a look at the GardenHelper's `canPlant()` method in the [javadoc](http://www.cs.colostate.edu/~cs163/javadoc/lab05/GardenHelper.html). Before you start coding, draw out the requirements and write pseudocode for how to implement this method. There are lots of variables to consider, as there are in an industry. This is a crucial step in the coding process to save valuable time and headaches! Puzzle it out now, then the actual coding process will go much smoother. 
 
 Not sure what pseudocode is? No problem! We're used to seeing fully functional code, such as
 ```java
@@ -52,7 +52,7 @@ if(str.equals("oranges")){
     //do something
 }
 ```
-Now, instead of calling just one method, the `.equals()` method, we can call the `equals()` method **and** the `getName()` method. (This is assuming we have a Fruit object that has a name variable and associated getName() method)
+Now, instead of calling just one method, the `.equals()` method, we can call the `equals()` method **and** the `getName()` method. (This is assuming we have a Fruit object that has a name variable and is associated with getName() method)
 ```java
 Fruit fruit1 = new Fruit("orange");
 if(fruit1.getName().equals("orange")){
@@ -108,7 +108,7 @@ if(plant1.isVegetable()){
     if(plant1.isBroccoli()){
         //ew! don't eat it
     }
-    else(
+    else {
         //eat it
     }
 }
