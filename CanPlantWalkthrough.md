@@ -6,7 +6,7 @@ Here is a walkthrough for canPlant(). There are a lot of ways you can do it, so 
 * Conquer: Solve those parts, if you can't, find ways to break it down more. 
 * Glue: Assemble those parts back in away to solve the larger problem. 
 
-The logic of canPlant() is hard enough that applying the divide-conque-glue strategy is the best way to achieve success.
+The logic of canPlant() is hard enough that applying the divide-conquer-glue strategy is the best way to achieve success.
 
 ## Assumptions 
 I am assuming you have completed `addRow(int row, int pH, String light)`. Remember, it is an extension (completing) of the code presented in the javadoc, and nothing more!
