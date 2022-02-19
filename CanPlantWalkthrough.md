@@ -215,7 +215,6 @@ public boolean canPlant(String plantName, GardenRow row){
      otherA = one;
      otherB = two;
    }
-   if(otherA == null || otherB == null) return false; // saftey check
 
    boolean rowCheck = plant.getType().equals("VEG") ||
                   otherA == null || otherB == null ||  // the other rows are empty
@@ -256,7 +255,6 @@ private boolean checkRowConditions(GardenPlant plant, GardenRow row) {
      otherA = one;
      otherB = two;
    }
-   if(otherA == null || otherB == null) return false; // saftey check
 
    return plant.getType().equals("VEG") ||
                   otherA == null || otherB == null ||  // the other rows are empty
