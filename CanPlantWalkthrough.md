@@ -11,7 +11,7 @@ The logic of canPlant() is hard enough that applying the divide-conquer-glue str
 ## Assumptions 
 I am assuming you have completed `addRow(int row, int pH, String light)`. Remember, it is an extension (completing) of the code presented in the javadoc, and nothing more!
 
-Also, after I completed can plant, I added additional tests to my `public static void main(String[] args)` inside of `GardenHelper.java`.
+Also, after I completed addRow, I added additional tests to my `public static void main(String[] args)` inside of `GardenHelper.java`.
 
 The code I personnally added are as follows:
 
