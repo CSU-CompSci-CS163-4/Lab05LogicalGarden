@@ -174,7 +174,7 @@ return goodSun && correctPH && rowCheck; // updated statement
        
 ```
 
-That was it! Take your time to go through it, and try to seek deeper understanding of every part. That will make you a better program, and you will find this starts to come more naturally in the future. I also added the following test to my main method
+That was it! Take your time to go through it, and try to seek deeper understanding of every part. That will make you a better programmer, and you will find this starts to come more naturally in the future. I also added the following test to my main method
 
 ```java
   GardenHelper gardenHelper = new GardenHelper();
