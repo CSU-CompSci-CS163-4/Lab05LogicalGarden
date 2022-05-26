@@ -45,11 +45,38 @@ public class GardenHelper {
         }
     }
 
-    //STEP 3
-    public boolean canPlant(String plantName, GardenRow row){
-        //TODO student
-        return false;
-    }
+   public boolean canPlant(String plantName, GardenRow row){
+        GardenPlant plant = searchPlant(plantName);
+         if (plant == null || row == null) return false;
+         boolean goodSun = row.getLight().equals(plant.getAmountOfSunshine())
+                     || plant.getAmountOfSunshine().equals("any");
+         boolean correctPH = (plant.getpHLow() <= row.getPH()) && 
+                       (row.getPH() <= plant.getpHHigh());
+
+
+   // This next part is a very *robust* version
+   // and you will notice more drawn out, so you can see the steps I took 
+         GardenRow otherA = null, otherB = null;
+         if (row.equals(one)) {
+              otherA = two;
+              otherB = three;
+         } else if (row.equals(two)) {
+               otherA = one;
+               otherB = three;
+          } else if (row.equals(three)) {
+              otherA = one;
+              otherB = two;
+         }
+
+         boolean rowCheck = plant.getType().equals("VEG") ||
+                  otherA == null || otherB == null ||  // the other rows are empty
+                  (otherA != null && otherA.getPlant() == null) || // the rows exist but no plants
+                  (otherB != null && otherB.getPlant() == null) ||
+                  (otherA != null && otherA.getPlant() != null && otherA.getPlant().getType().equals("VEG"))||
+                  (otherB != null && otherB.getPlant() != null && otherB.getPlant().getType().equals("VEG"));
+        
+         return goodSun && correctPH && rowCheck;
+}
 
 
     public void buildOptions() {
