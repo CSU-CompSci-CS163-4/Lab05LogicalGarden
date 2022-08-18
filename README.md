@@ -16,7 +16,7 @@ We have provided two test cases for you in `GardenHelper.java`'s `main` method. 
 
 ## Step 5: Turning In
 1. Turn in your program files to Zybooks
-2. Show your self-explanation, pseudocode, and tests to your TA (in-person) or submit it online
+2. Show your self-explanation, pseudocode, and tests to your TA (in-person). Online students will not have the option to submit their self-explanations but it is still highly recommend that they are complete to help better understand the code.
 
 ## Extra Practice (Optional)
 You may have noticed in your testing that there are some things we just assume to be true. For example, that the user will enter row 1-3 and not some other number. For some extra practice, make a list of the methods that bugs could possibly be introduced, and make some test cases that break the code. 
